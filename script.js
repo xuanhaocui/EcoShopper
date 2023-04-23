@@ -21,6 +21,10 @@ chrome.storage.local.get("info", function (data) {
     })
     .then(function (data) {
       console.log(data);
-      document.getElementById("content").innerHTML = data.sus;
+      document.getElementById("product-container").innerHTML = data.map(item => `<p class="content">${item.sus}</p>`);
     });
 });
+
+//document.getElementById("content").innerHTML = data.sus;
+
+//document.getElementById("product-container").innerHTML = data.map(item => `<p class="content">${item.sus}</p>`).join('');
