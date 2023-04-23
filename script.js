@@ -23,6 +23,22 @@ chrome.storage.local.get("info", function (data) {
     })
     .then(function (data) {
       console.log(data);
+      const scores = data.sus.map((str) => {
+        const match = str.match(/Sustainability Score:\s*(\d+)\s*\/\s*\d+/);
+        if (match) {
+          return parseInt(match[1]);
+        } else {
+          return 0;
+        }
+      });
+      
+      function add(accumulator, a) {
+        return accumulator + a;
+      }
+      const sum = scores.reduce(add, 0); 
+
+      document.getElementById("score-title").innerHTML = `Your Score: ${sum} / ${data.sus.length * 10}`
+
       document.getElementById("product-container").innerHTML = data.sus.map(
         (item) =>
           `<p class="content">${item.trim().replace(/(\r\n|\r|\n)/g, "<br>")}</p>`
