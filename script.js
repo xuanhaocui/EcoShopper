@@ -23,7 +23,10 @@ chrome.storage.local.get("info", function (data) {
     })
     .then(function (data) {
       console.log(data);
-      document.getElementById("product-container").innerHTML = data.map(item => `<p class="content">${item.sus}</p>`);
+      document.getElementById("product-container").innerHTML = data.sus.map(
+        (item) =>
+          `<p class="content">${item.trim().replace(/(\r\n|\r|\n)/g, "<br>")}</p>`
+      );
 
       spinner.style.display = "none"; // hide spinner
     });
