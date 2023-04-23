@@ -59,9 +59,11 @@ const score = async (params) => {
     Manufacturer: ${info.manufacturer !== "" ? info.brand : "N/A"} 
     Sold By: ${info.sold_by !== "" ? info.sold_by : "N/A"} 
     Description: ${desc} 
-
-    Evaluate whether this product is environmentally sustainable project or not and return an answer in this format:
     
+    *If not enough information is provided about the product then do NOT assume it's non-sustainable and mention in the response that you do not have enough information*
+    *Make sure the answer is at least 50 words otherwise this will be an INSTANT FAIL*    
+    Evaluate whether this product is environmentally sustainable project or not and return an answer in this format:
+
     Sustainability Score: *Give the product a score out of 10 how sustainable it is* / 10
     
     *If the sustainability score is higher than 5 then make a claim saying the product is sustainable otherwise make a claim saying the product is not sustainable*
