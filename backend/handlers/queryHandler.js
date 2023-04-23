@@ -50,7 +50,7 @@ const score = async (params) => {
     - This product is multi-use and can be recycled afterwards at the end of it's life cycle
     
     All of these qualities make this bag a highly environmentally sustainable product 
-    
+
     Here's the description of a product:
     
     Title: ${title}
@@ -60,7 +60,7 @@ const score = async (params) => {
     Sold By: ${info.sold_by !== "" ? info.sold_by : "N/A"} 
     Description: ${desc} 
 
-
+    *If not enough information is provided about the product then do NOT assume it's non-sustainable and mention in the response that you do not have enough information*
     Evaluate whether this product is environmentally sustainable project or not and return an answer in this format:
     
     Sustainability Score: *Give the product a score out of 10 how sustainable it is* / 10
