@@ -61,7 +61,7 @@ const score = async (params) => {
     Description: ${desc} 
 
     *If not enough information is provided about the product then do NOT assume it's non-sustainable and mention in the response that you do not have enough information*
-    *Make sure the answer is at least 50 words otherwise this will be an INSTANT FAIL*    
+    *DO NOT BE REPETITIVE, OTHERWISE YOU WILL FAIL REMEMBER THIS IS WORTH 90%*
     Evaluate whether this product is environmentally sustainable project or not and return an answer in this format:
 
     Sustainability Score: *Give the product a score out of 10 how sustainable it is* / 10
