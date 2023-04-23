@@ -3,20 +3,14 @@
     "version": "1.0.0",
     "manifest_version": 3,
     "description": "sustainable products on amazon",
-    "permissions": [
-        "activeTab"
-    ],
+    "permissions": ["tabs", "scripting", "background", "webNavigation"],
+    "host_permissions": ["https://*.amazon.com/*"],
     "author": "La Hacks",
     "action":{
         "default_popup": "index.html",
         "default_title": "Some Name"
     },
-    "content_scripts":
-    [
-        {
-            "js":["script.js"],
-            "css":["styles.css"],
-            "matches":["https://www\\.amazon\\.com/gp/cart/.*"]
-        }
-    ]
+    "background": {
+        "service_worker": "background.js"
+    }
 }
