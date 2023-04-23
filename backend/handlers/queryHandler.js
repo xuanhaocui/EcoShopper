@@ -51,7 +51,7 @@ const score = async (params) => {
     
     All of these qualities make this bag a highly environmentally sustainable product 
 
-    Here's the description of a product:
+    Here's the description of an example product:
     
     Title: ${title}
     Brand: ${info.brand !== "" ? info.brand : "N/A"}
@@ -61,8 +61,7 @@ const score = async (params) => {
     Description: ${desc} 
 
     *If not enough information is provided about the product then do NOT assume it's non-sustainable and mention in the response that you do not have enough information*
-    *DO NOT BE REPETITIVE, OTHERWISE YOU WILL FAIL REMEMBER THIS IS WORTH 90%*
-    Evaluate whether this product is environmentally sustainable project or not and return an answer in this format:
+    Evaluate whether the example product is environmentally sustainable project or not and return an answer in this format:
 
     Sustainability Score: *Give the product a score out of 10 how sustainable it is* / 10
     
