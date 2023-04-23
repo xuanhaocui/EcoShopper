@@ -30,7 +30,7 @@ body {
     height: auto;
 }
 
-#content {
+.content {
     background-color: #D8C6C6;
     padding: 1.5em;
 }

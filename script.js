@@ -2,6 +2,8 @@ chrome.storage.local.get("info", function (data) {
   // document.getElementById("content").innerHTML = data.info;
   const ids = data.info;
   console.log("ids", ids);
+  const spinner = document.getElementById("spinner");
+  spinner.style.display = "block"; // show spinner
   fetch("http://localhost:8000/api/query", {
     method: "POST",
     body: JSON.stringify({
@@ -21,6 +23,12 @@ chrome.storage.local.get("info", function (data) {
     })
     .then(function (data) {
       console.log(data);
-      document.getElementById("content").innerHTML = data.sus;
+      document.getElementById("product-container").innerHTML = data.map(item => `<p class="content">${item.sus}</p>`);
+
+      spinner.style.display = "none"; // hide spinner
     });
 });
+
+//document.getElementById("content").innerHTML = data.sus;
+
+//document.getElementById("product-container").innerHTML = data.map(item => `<p class="content">${item.sus}</p>`).join('');
