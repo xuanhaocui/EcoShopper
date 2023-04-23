@@ -67,8 +67,8 @@ const score = async (params) => {
     
     *If the sustainability score is higher than 5 then make a claim saying the product is sustainable otherwise make a claim saying the product is not sustainable*
     *5 examples backing up your claim of whether the product is sustainable or not, make sure the examples start with "-". Make sure that each example backing up your claim has evidence. If certain characterstics are unknown about the product DO NOT ASSUME THIS WILL RESULT IN AN INSTANT FAIL*`,
-    max_tokens: 1046,
-    temperature: 0.5,
+    max_tokens: 314,
+    temperature: 0.9,
     k: 500,
     stop_sequences: [],
     return_likelihoods: "NONE",
