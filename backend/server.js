@@ -22,7 +22,7 @@ app.post("/api/query", query);
 
 app.get("*", (req, res, next) => {
   console.log("Request received");
-  res.sendFile(path.join(CWD, "index.html"));
+  res.sendFile(path.join(CWD, "extension/index.html"));
 });
 
 let port = process.env.port || 8000;
