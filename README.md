@@ -1,1 +1,11 @@
-# LAHacks2023
+# EcoShopper
+
+Overview...
+
+## Technology used
+
+...
+
+## Dev workflow
+
+...
