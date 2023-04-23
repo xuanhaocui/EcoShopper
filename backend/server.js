@@ -9,6 +9,11 @@ dotenv.config({ path: "backend/config.env" });
 
 const app = express();
 const CWD = process.cwd();
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 app.use(express.json());
 app.use("/dev", express.static(path.join(CWD, "dev")));
 app.use("/frontend", express.static(path.join(CWD, "frontend")));

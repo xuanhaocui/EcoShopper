@@ -44,8 +44,11 @@ const query = catchWrap(async (req, res, next) => {
   if (!asins) {
     throw new Error("Missing request ASIN field");
   }
+  console.log("query request received");
+  console.log(asins);
   const resps = await Promise.all(asins.map((asin) => singleQuery(asin)));
-  res.status(200).json(resps);
+  console.log(resps);
+  res.status(200).json({ sus: resps });
 });
 
 export { query };
