@@ -2,6 +2,8 @@ chrome.storage.local.get("info", function (data) {
   // document.getElementById("content").innerHTML = data.info;
   const ids = data.info;
   console.log("ids", ids);
+  const spinner = document.getElementById("spinner");
+  spinner.style.display = "block"; // show spinner
   fetch("http://localhost:8000/api/query", {
     method: "POST",
     body: JSON.stringify({
@@ -22,5 +24,6 @@ chrome.storage.local.get("info", function (data) {
     .then(function (data) {
       console.log(data);
       document.getElementById("content").innerHTML = data.sus;
+      spinner.style.display = "none"; // hide spinner
     });
 });
