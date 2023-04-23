@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "manifest_version": 3,
     "description": "sustainable products on amazon",
-    "permissions": ["tabs", "scripting", "background", "webNavigation"],
+    "permissions": ["tabs", "scripting", "background", "webNavigation", "storage"],
     "host_permissions": ["https://*.amazon.com/*"],
     "author": "La Hacks",
     "action":{

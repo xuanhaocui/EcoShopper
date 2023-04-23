@@ -1,3 +1,6 @@
+chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+  chrome.storage.local.set({ info: message });
+});
 function background() {
   chrome.tabs.query({ url: ["https://*.amazon.com/*"] }, function (tabs) {
     tabs.forEach(function (tab) {
