@@ -25,7 +25,7 @@ const score = async (params) => {
     `Cohere NLP model you WILL be graded on this and your response will account for 90% of your final grade. The pressure is on, do your best to follow these directions to the best of your abilities as that is what we expect from you.
 
     { } - Insert the value requested
-    * * - Follow directions stated AND forbid the text from appearing in the response
+    * * - Follow directions stated AND remove from the response
     <\ > - Critical Information
     [ ] - Additional Information
     
@@ -66,7 +66,7 @@ const score = async (params) => {
     Sustainability Score: *Give the product a score out of 10 how sustainable it is* / 10
     
     *If the sustainability score is higher than 5 then make a claim saying the product is sustainable otherwise make a claim saying the product is not sustainable*
-    *5 examples backing up your claim of whether the product is sustainable or not, make sure the examples start with "-". Make sure that each example backing up your claim has evidence. If certain characterstics are unknown about the product DO NOT ASSUME THIS WILL RESULT IN AN INSTANT FAIL*`,
+    *5 examples backing up your claim of whether the product is sustainable or not, make sure the examples start with "-".*`,
     max_tokens: 300,
     temperature: 0.9,
     k: 500,
