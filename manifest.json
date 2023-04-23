@@ -1,16 +1,22 @@
 {
-    "name": "Some Name",
+    "name": "EcoShopper",
     "version": "1.0.0",
     "manifest_version": 3,
     "description": "sustainable products on amazon",
-    "permissions": ["tabs", "scripting", "background", "webNavigation", "storage"],
+    "permissions": ["tabs", "scripting", "background", "webNavigation", "storage", "identity"],
     "host_permissions": ["https://*.amazon.com/*"],
     "author": "La Hacks",
     "action":{
         "default_popup": "index.html",
-        "default_title": "Some Name"
+        "default_title": "EcoShopper"
     },
     "background": {
         "service_worker": "background.js"
-    }
+    },
+    "icons": {
+        "16": "images/good-leaf.png",
+        "32": "images/good-leaf.png",
+        "48": "images/good-leaf.png",
+        "128": "images/good-leaf.png"
+      }
 }
